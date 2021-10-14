@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+declare var $: any;
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
