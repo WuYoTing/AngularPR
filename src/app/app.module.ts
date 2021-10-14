@@ -4,12 +4,16 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import { TopNavComponent } from './pages/layouts/top-nav/top-nav.component';
 import {RouterModule} from "@angular/router";
+import { HomeComponent } from './pages/content/home/home.component';
+import { ProductsComponent } from './pages/content/products/products.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopNavComponent
+    TopNavComponent,
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
