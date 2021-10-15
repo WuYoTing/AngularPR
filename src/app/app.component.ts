@@ -1,5 +1,6 @@
-declare var $: any;
-import {Component} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {PrimeNGConfig} from 'primeng/api';
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,15 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularPR';
+
+  constructor(private config: PrimeNGConfig) {
+  }
+
+  ngOnInit() {
+    this.config.setTranslation({
+      accept: 'Accept',
+      reject: 'Cancel',
+      //translations
+    });
+  }
 }

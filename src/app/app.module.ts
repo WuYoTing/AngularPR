@@ -6,6 +6,7 @@ import { TopNavComponent } from './pages/layouts/top-nav/top-nav.component';
 import {RouterModule} from "@angular/router";
 import { HomeComponent } from './pages/content/home/home.component';
 import { ProductsComponent } from './pages/content/products/products.component';
+import {MenubarModule} from "primeng/menubar";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ProductsComponent } from './pages/content/products/products.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
