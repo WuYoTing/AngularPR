@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import {Component} from '@angular/core';
 import {PrimeNGConfig} from 'primeng/api';
 
 
@@ -16,8 +16,7 @@ export class AppComponent {
   ngOnInit() {
     this.config.setTranslation({
       accept: 'Accept',
-      reject: 'Cancel',
-      //translations
+      reject: 'Cancel'
     });
   }
 }
