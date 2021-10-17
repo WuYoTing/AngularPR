@@ -46,3 +46,6 @@ Thumbs.db
 
 # jetbrain
 .idea
+
+src/environments/environment.ts
+src/environments/environment.prod.ts

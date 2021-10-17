@@ -1,1 +1,13 @@
 <h1>Home</h1>
+<div *ngIf="weatherData">
+  <h3>{{weatherData.name}}</h3><h4>({{weatherData.coord.lat}},{{weatherData.coord.lon}})</h4>
+  <div *ngIf="weatherData.weather[0]">
+    <h4>天氣: {{weatherData.weather[0].description}}</h4>
+  </div>
+  <div *ngIf="weatherData.main">
+    <h4>溫度: {{weatherData.main.temp}}</h4>
+    <h4>體感溫度: {{weatherData.main.feels_like}}</h4>
+    <h4>最高溫度: {{weatherData.main.temp_max}}</h4>
+    <h4>最低溫度: {{weatherData.main.temp_min}}</h4>
+  </div>
+</div>
