@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-calculator',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService: Title) {
+  }
 
   ngOnInit(): void {
+    this.titleService.setTitle('Calculator');
   }
 
 }

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 
 @Component({
@@ -16,6 +17,9 @@ export class CalendarComponent {
   es: any;
 
   invalidDates!: Array<Date>;
+
+  constructor(private titleService: Title) {
+  }
 
   ngOnInit() {
     this.es = {
@@ -80,6 +84,7 @@ export class CalendarComponent {
     let invalidDate = new Date();
     invalidDate.setDate(today.getDate() - 1);
     this.invalidDates = [today, invalidDate];
+    this.titleService.setTitle('Calender');
   }
 
 }
