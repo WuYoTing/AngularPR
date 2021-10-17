@@ -13,11 +13,11 @@ export class TopNavComponent implements OnInit {
 
   ngOnInit() {
     this.items = [
-      {label: 'Hello World', icon: 'pi pi-fw'},
-      {label: 'Home', icon: 'pi pi-fw pi-home'},
-      {label: 'Calendar', icon: 'pi pi-fw pi-calendar'},
-      {label: 'Products', icon: 'pi pi-fw pi-file'},
-      {label: 'Calculator', icon: 'pi pi-fw pi-plus'},
+      {label: 'Hello World', icon: 'pi pi-fw', routerLink: '/home'},
+      {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: '/home'},
+      {label: 'Calendar', icon: 'pi pi-fw pi-calendar', routerLink: '/calender'},
+      {label: 'Products', icon: 'pi pi-fw pi-file', routerLink: "/products"},
+      {label: 'Calculator', icon: 'pi pi-fw pi-plus', routerLink: "/calculator"},
     ];
 
     this.activeItem = this.items[0];

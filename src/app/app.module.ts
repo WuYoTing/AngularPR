@@ -8,6 +8,12 @@ import {HomeComponent} from './pages/content/home/home.component';
 import {ProductsComponent} from './pages/content/products/products.component';
 import {MenubarModule} from "primeng/menubar";
 import {TabMenuModule} from "primeng/tabmenu";
+import {AppRoutingModule} from './app-routing.module';
+import {CalendarComponent} from './pages/content/calendar/calendar.component';
+import {CalculatorComponent} from './pages/content/calculator/calculator.component';
+import {FormsModule} from "@angular/forms";
+import {CalendarModule} from "primeng/calendar";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,13 +21,19 @@ import {TabMenuModule} from "primeng/tabmenu";
     AppComponent,
     TopNavComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    CalendarComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     MenubarModule,
-    TabMenuModule
+    TabMenuModule,
+    AppRoutingModule,
+    FormsModule,
+    CalendarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
