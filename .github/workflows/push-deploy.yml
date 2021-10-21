@@ -12,20 +12,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup node
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: '14'
           cache: 'npm'
-      - run: npm install
+
+      - name: Install Dependencies
+        run: npm install
 
       - name: Build
-        run: npm build --prod
         env:
           WEATHER_APP_ID: ${{ secrets.WEATHER_APP_ID }}
+        run: npm build --prod
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          github_token: ${{ secrets.DEPLOY_TOKEN }}
-          publish_dir: dist/AngularPR
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: dist/AngularPR
