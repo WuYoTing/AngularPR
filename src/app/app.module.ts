@@ -15,6 +15,9 @@ import {CalculatorComponent} from './pages/content/calculator/calculator.compone
 import {FormsModule} from "@angular/forms";
 import {CalendarModule} from "primeng/calendar";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {PlaygroundComponent} from './pages/content/playground/playground.component';
+import {BlockUIModule} from "primeng/blockui";
+import {PanelModule} from "primeng/panel";
 
 
 @NgModule({
@@ -24,7 +27,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     HomeComponent,
     ProductsComponent,
     CalendarComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    PlaygroundComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     CalendarModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    BlockUIModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]
