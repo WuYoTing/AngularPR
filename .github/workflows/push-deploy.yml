@@ -24,11 +24,11 @@ jobs:
       - name: Build
         env:
           WEATHER_APP_ID: ${{ secrets.WEATHER_APP_ID }}
-        run: npm build --prod
+        run: npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
+          branch: gh-pages
+          folder: dist/AngularPR
           token: ${{ secrets.DEPLOY_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
