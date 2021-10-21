@@ -1,0 +1,27 @@
+---
+name: "master-push-deploy"
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  WEBAPP_NAME: AngularPR
+  OS: ubuntu-latest
+
+jobs:
+  push-deploy:
+    name: ${{ env.OS }} - Push Deploy
+    runs-on: ${{ env.OS }}
+    strategy:
+      fail-fast: false
+    steps:
+
+      - name: Angular Deploy gh-pages Actions
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@v1.3.2
+        with:
+          github_access_token: ${{ secrets.DEPLOY_TOKEN }}
+          build_configuration: production
+          base_href: /${{ env.WEBAPP_NAME }}/
+          deploy_branch: gh-pages
+          angular_dist_build_folder: dist/${{ env.WEBAPP_NAME }}
