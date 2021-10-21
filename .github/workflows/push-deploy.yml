@@ -21,17 +21,13 @@ jobs:
           node-version: '14'
           cache: 'npm'
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Build
+      - name: All things angular
+        uses: AhsanAyaz/angular-deploy-gh-pages-actions@[version] ## replace by latest version without it you will see Expected format {org}/{repo}[/path]@ref. Actual 'AhsanAyaz/angular-deploy-gh-pages-actions',Input string was not in a correct format.
         env:
           WEATHER_APP_ID: ${{ secrets.WEATHER_APP_ID }}
-        run: npm run build
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          branch: gh-pages
-          folder: dist/AngularPR
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          github_access_token: ${{ secrets.DEPLOY_TOKEN }} # see the Configuration section for how you can create secrets
+          build_configuration: production # The build environment for the app. please look configurations in your angular.json
+          base_href: /AngularPR/   # make sure this corresponds to https://<your_username>.github.io/<base_href>/
+          deploy_branch: gh-pages # The branch the action should deploy to.
+          angular_dist_build_folder: dist/AngularPR # The folder where your project is supposed to be after running ng build by the action.
