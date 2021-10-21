@@ -9,22 +9,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: HELLO_WORLD
+        run: echo ${{ secrets.HELLO_WORLD }}
+
       - name: Checkout
         uses: actions/checkout@v2
-        env:
-          WEATHER_APP_ID: ${{ secrets.WEATHER_APP_ID }}
 
       - name: Setup Node
         uses: actions/setup-node@v2
-        env:
-          WEATHER_APP_ID: ${{ secrets.WEATHER_APP_ID }}
         with:
           node-version: '14'
           cache: 'npm'
 
       - name: Install Dependencies
-        env:
-          WEATHER_APP_ID: ${{ secrets.WEATHER_APP_ID }}
         run: npm install
 
       - name: Build
