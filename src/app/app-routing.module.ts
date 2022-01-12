@@ -5,13 +5,15 @@ import {CalendarComponent} from "./pages/content/calendar/calendar.component";
 import {ProductsComponent} from "./pages/content/products/products.component";
 import {CalculatorComponent} from "./pages/content/calculator/calculator.component";
 import {PlaygroundComponent} from "./pages/content/playground/playground.component";
+import {PdfViewerComponent} from "./pages/content/pdf-viewer/pdf-viewer.component";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'calender', component: CalendarComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'calculator', component: CalculatorComponent},
-  {path: 'playground', component: PlaygroundComponent}
+  {path: 'playground', component: PlaygroundComponent},
+  {path: 'pdf-viewer', component: PdfViewerComponent}
 ];
 
 

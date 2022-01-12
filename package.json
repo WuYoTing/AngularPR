@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "new component": "ng g component",
-    "build Github Page": "ng build --prod --base-href /${repo_name}/",
+    "build Github Page": "ng build --prod --base-href /AngularPR/",
+    "build ": "npm run build --base-href /AngularPR/",
     "deply to github page": "npx ngh --no-silent "
   },
   "private": true,
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "ng2-pdfjs-viewer": "^6.0.2",
     "primeflex": "^3.0.1",
     "primeicons": "^4.1.0",
     "primeng": "^12.2.1",

@@ -18,6 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PlaygroundComponent} from './pages/content/playground/playground.component';
 import {BlockUIModule} from "primeng/blockui";
 import {PanelModule} from "primeng/panel";
+import {PdfViewerComponent} from './pages/content/pdf-viewer/pdf-viewer.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {PanelModule} from "primeng/panel";
     ProductsComponent,
     CalendarComponent,
     CalculatorComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    PdfViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,7 @@ import {PanelModule} from "primeng/panel";
     CalendarModule,
     BrowserAnimationsModule,
     BlockUIModule,
-    PanelModule
+    PanelModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
