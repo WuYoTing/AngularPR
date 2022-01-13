@@ -19,7 +19,7 @@ export class TopNavComponent implements OnInit {
       {label: 'Products', icon: 'pi pi-fw pi-file', routerLink: "/products"},
       {label: 'Calculator', icon: 'pi pi-fw pi-plus', routerLink: "/calculator"},
       {label: 'Playground', icon: 'pi pi-fw pi-table', routerLink: "/playground"},
-      {label: 'pdf viewer', icon: 'pi pi-fw file-o', routerLink: "/pdf-viewer"},
+      {label: 'pdf scan', icon: 'pi pi-fw pi-file-pdf', routerLink: "/pdf-scan"},
     ];
 
     this.activeItem = this.items[0];

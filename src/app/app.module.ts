@@ -18,7 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {PlaygroundComponent} from './pages/content/playground/playground.component';
 import {BlockUIModule} from "primeng/blockui";
 import {PanelModule} from "primeng/panel";
-import {PdfViewerComponent} from './pages/content/pdf-viewer/pdf-viewer.component';
+import {PdfScanComponent} from './pages/content/pdf-scan/pdf-scan.component';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import {PdfViewerComponent} from './pages/content/pdf-viewer/pdf-viewer.componen
     CalendarComponent,
     CalculatorComponent,
     PlaygroundComponent,
-    PdfViewerComponent
+    PdfScanComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +44,7 @@ import {PdfViewerComponent} from './pages/content/pdf-viewer/pdf-viewer.componen
     CalendarModule,
     BrowserAnimationsModule,
     BlockUIModule,
-    PanelModule 
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

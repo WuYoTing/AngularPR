@@ -5,7 +5,7 @@ import {CalendarComponent} from "./pages/content/calendar/calendar.component";
 import {ProductsComponent} from "./pages/content/products/products.component";
 import {CalculatorComponent} from "./pages/content/calculator/calculator.component";
 import {PlaygroundComponent} from "./pages/content/playground/playground.component";
-import {PdfViewerComponent} from "./pages/content/pdf-viewer/pdf-viewer.component";
+import { PdfScanComponent } from './pages/content/pdf-scan/pdf-scan.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'products', component: ProductsComponent},
   {path: 'calculator', component: CalculatorComponent},
   {path: 'playground', component: PlaygroundComponent},
-  {path: 'pdf-viewer', component: PdfViewerComponent}
+  {path: 'pdf-scan', component: PdfScanComponent}
 ];
 
 
